@@ -1,0 +1,58 @@
+@font-face {
+  font-family: WorksSans;
+  src: url('/frontend/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+html {
+  /* Define a base de cálculo para a unidade 'rem' (1rem = 10px) */
+  font-size: 62.5%;
+}
+
+body {
+  background: black;
+}
+
+#background-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#retangulo-azul-1 {
+  width: 42.5rem;
+  height: 65rem;
+  background: linear-gradient(to top, #0a2449, #1c4a8c);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#background-2-branco {
+  display: flex;
+  flex-direction: column;
+  width: 90rem;
+  height: 65rem;
+  background: rgb(255, 255, 255);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#container-nome {
+  display: flex;
+  flex-direction: column;
+}
+
+#container-cpf {
+  display: flex;
+  flex-direction: column;
+}
+
+#container-telefone {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-nome, #label-cpf, #label-tel  {
+
+  font-family: 'WorksSans'; 
+
+}
