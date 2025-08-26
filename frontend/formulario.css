@@ -1,6 +1,7 @@
 @font-face {
   font-family: WorksSans;
-  src: url('/frontend/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+  src: url("/frontend/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -36,23 +37,43 @@ body {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-#container-nome {
+#container-nome,
+#container-cpf,
+#container-telefone,
+#container-email,
+#container-cnpj,
+#container-cartao-cnpj,
+#container-contrato-social {
   display: flex;
   flex-direction: column;
 }
 
-#container-cpf {
-  display: flex;
-  flex-direction: column;
+#label-nome,
+#label-cpf,
+#label-tel,
+#label-email,
+#label-cnpj,
+#label-cartao-cnpj,
+#label-contrato-social {
+  font-family: "WorksSans";
+  font-size: 1.5rem;
 }
 
-#container-telefone {
-  display: flex;
-  flex-direction: column;
+#input-nome,
+#cpf-input,
+#input-tel,
+#input-email,
+#input-cnpj,
+#input-cartao-cnpj,
+#input-contrato-social {
+  width: 50rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
 }
 
-#label-nome, #label-cpf, #label-tel  {
-
-  font-family: 'WorksSans'; 
-
+#form-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
