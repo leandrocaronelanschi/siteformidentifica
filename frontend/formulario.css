@@ -43,7 +43,8 @@ body {
 #container-email,
 #container-cnpj,
 #container-cartao-cnpj,
-#container-contrato-social {
+#container-contrato-social,
+#container-cnh {
   display: flex;
   flex-direction: column;
 }
@@ -54,18 +55,20 @@ body {
 #label-email,
 #label-cnpj,
 #label-cartao-cnpj,
-#label-contrato-social {
+#label-contrato-social,
+#label-cnh {
   font-family: "WorksSans";
   font-size: 1.5rem;
 }
 
 #input-nome,
-#cpf-input,
+#input-cpf,
 #input-tel,
 #input-email,
-#input-cnpj,
-#input-cartao-cnpj,
-#input-contrato-social {
+#input-cnpj
+/* #input-cartao-cnpj,
+#input-contrato-social,
+#input-cnh*/ { 
   width: 50rem;
   height: 3rem;
   border: solid 0.15rem black;
@@ -77,3 +80,22 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
+
+#input-cartao-cnpj,
+#input-contrato-social,
+#input-cnh {
+  margin-top: 0.5rem;
+}
+
+#btn-enviar1 {
+  width: 40rem;
+}
+
+
+/* #label-cartao-cnpj,
+#label-contrato-social,
+#label-cnh {
+
+text-decoration:underline black;
+
+} */

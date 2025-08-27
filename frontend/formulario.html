@@ -25,7 +25,7 @@
           </div>
           <div id="container-cpf">
             <label for="input-cpf" id="label-cpf">CPF:</label>
-            <input class="input-cpf" id="cpf-input" type="tel" />
+            <input class="cpf-input" id="input-cpf" type="tel" />
           </div>
 
           <div id="container-telefone">
@@ -60,21 +60,42 @@
               required
             />
           </div>
+          <div id="container-cnh">
+            <label for="input-cnh" id="label-cnh">Envie sua CNH ou RG:</label>
+            <input type="file" name="cnh" id="input-cnh" required />
+          </div>
 
           <div id="container-cartao-cnpj">
             <label for="input-cnpj" id="label-cartao-cnpj"
               >Envie seu cartão de CNPJ:</label
             >
-            <input type="file" name="cartao-cnpj" id="input-cnpj" required />
+            <input
+              type="file"
+              name="cartao-cnpj"
+              id="input-cartao-cnpj"
+              required
+            />
           </div>
 
-<div id="container-contrato-social">
-    <label for="input-contrato-social" id="label-contrato-social">Envie o Contrato Social ou CCMEI da empresa:</label>
-    <input type="file" name="contrato-social" id="input-contrato-social" required>
-</div>
+          <div id="container-contrato-social">
+            <label for="input-contrato-social" id="label-contrato-social"
+              >Envie o Contrato Social ou CCMEI da empresa:</label
+            >
+            <input
+              type="file"
+              name="contrato-social"
+              id="input-contrato-social"
+              required
+            />
+          </div>
+
+<button type="submit" id="btn-enviar1">Enviar dados</button>
 
         </form>
       </div>
     </div>
+
+<script src="./formulario.js"></script>
+
   </body>
 </html>
