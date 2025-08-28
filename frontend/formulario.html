@@ -50,6 +50,50 @@
             />
           </div>
 
+          <div id="container-endereco">
+            <div id="container-rua">
+              <label for="input-rua" id="label-rua">Nome da rua:</label>
+              <input
+                type="text"
+                name="endereço"
+                id="input-rua"
+                placeholder="Nome da rua"
+                required
+              />
+            </div>
+
+            <div id="container-numero">
+              <label for="input-numero" id="label-numero">Número</label>
+              <input type="number" id="input-numero" required />
+            </div>
+
+            <div id="container-bairro">
+              <label for="input-bairro" id="label-bairro">Bairro:</label>
+              <input
+                type="text"
+                name="bairro"
+                id="input-bairro"
+                placeholder="Digite o nome do bairro"
+                required
+              />
+            </div>
+
+            <div id="container-cidade">
+              <label for="input-cidade" id="label-cidade">Cidade:</label>
+              <input
+                type="text"
+                name="cidade"
+                id="input-cidade"
+                placeholder="Nome da cidade"
+              />
+            </div>
+
+            <div id="container-estado">
+              <label for="select-estado" id="label-estado">Estado:</label>
+              <select name="estado" id="select-estado"></select>
+            </div>
+          </div>
+
           <div id="container-cnpj">
             <label for="input-cnpj" id="label-cnpj">CNPJ:</label>
             <input
@@ -60,6 +104,7 @@
               required
             />
           </div>
+
           <div id="container-cnh">
             <label for="input-cnh" id="label-cnh">Envie sua CNH ou RG:</label>
             <input type="file" name="cnh" id="input-cnh" required />
@@ -89,13 +134,11 @@
             />
           </div>
 
-<button type="submit" id="btn-enviar1">Enviar dados</button>
-
+          <button type="submit" id="btn-enviar1">Enviar dados</button>
         </form>
       </div>
     </div>
 
-<script src="./formulario.js"></script>
-
+    <script src="./formulario.js"></script>
   </body>
 </html>

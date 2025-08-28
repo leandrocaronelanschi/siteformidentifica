@@ -56,7 +56,10 @@ body {
 #label-cnpj,
 #label-cartao-cnpj,
 #label-contrato-social,
-#label-cnh {
+#label-cnh,
+#label-rua,
+#label-bairro,
+#label-numero {
   font-family: "WorksSans";
   font-size: 1.5rem;
 }
@@ -65,7 +68,8 @@ body {
 #input-cpf,
 #input-tel,
 #input-email,
-#input-cnpj
+#input-cnpj,
+#input-rua
 /* #input-cartao-cnpj,
 #input-contrato-social,
 #input-cnh*/ { 
@@ -73,6 +77,21 @@ body {
   height: 3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
+}
+
+#input-bairro { 
+  width: 50rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-numero {
+width: 8rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+
 }
 
 #form-1 {
@@ -90,6 +109,36 @@ body {
 #btn-enviar1 {
   width: 40rem;
 }
+
+#container-endereco {
+  display: flex;
+  flex-wrap: wrap;  
+}
+
+#container-rua, #container-numero #container-bairro, 
+#container-cidade, #container-estado {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #container-bairro {
+  width: 25rem;
+} */
+
+/* Regra para o primeiro elemento (20%)
+#container-rua {
+  flex-basis: calc(60% - 7px);
+}
+
+Regra para o segundo elemento (50%) 
+#container-numero {
+  flex-basis: calc(15% - 7px);
+}
+
+ Regra para o terceiro elemento (30%) 
+#container-bairro {
+  flex-basis: calc(25% - 7px);
+} */
 
 
 /* #label-cartao-cnpj,

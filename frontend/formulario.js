@@ -1,5 +1,20 @@
 
+const estadosBr = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 
+    'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
 
+  
+
+for(const estados of estadosBr) {
+
+    const elementOption = document.createElement('option');
+
+    elementOption.value = estados;
+    elementOption.text = estados;
+
+    const selectEstados = document.getElementById('select-estado');
+    selectEstados.appendChild(elementOption);
+
+}
 
 const form = document.getElementById('form-1');
 
