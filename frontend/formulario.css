@@ -59,7 +59,10 @@ body {
 #label-cnh,
 #label-rua,
 #label-bairro,
-#label-numero {
+#label-numero,
+#label-cidade,
+#label-estado,
+#label-cep {
   font-family: "WorksSans";
   font-size: 1.5rem;
 }
@@ -69,7 +72,10 @@ body {
 #input-tel,
 #input-email,
 #input-cnpj,
-#input-rua
+#input-rua,
+#input-cidade
+
+
 /* #input-cartao-cnpj,
 #input-contrato-social,
 #input-cnh*/ { 
@@ -80,7 +86,7 @@ body {
 }
 
 #input-bairro { 
-  width: 50rem;
+  width: 25rem;
   height: 3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
@@ -88,6 +94,21 @@ body {
 
 #input-numero {
 width: 8rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+
+}
+
+#select-estado { 
+  width: 5rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-cep {
+width: 15rem;
   height: 3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
@@ -112,11 +133,12 @@ width: 8rem;
 
 #container-endereco {
   display: flex;
-  flex-wrap: wrap;  
+  flex-direction: row; 
+  flex-wrap: wrap; 
 }
 
-#container-rua, #container-numero #container-bairro, 
-#container-cidade, #container-estado {
+#container-rua, #container-numero, #container-bairro, 
+#container-cidade, #container-estado, #container-cep {
   display: flex;
   flex-direction: column;
 }

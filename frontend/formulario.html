@@ -28,6 +28,11 @@
             <input class="cpf-input" id="input-cpf" type="tel" />
           </div>
 
+          <div id="container-cnh">
+            <label for="input-cnh" id="label-cnh">Envie sua CNH ou RG:</label>
+            <input type="file" name="cnh" id="input-cnh" required />
+          </div>
+
           <div id="container-telefone">
             <label for="input-tel" id="label-tel">Telefone:</label>
             <input
@@ -92,6 +97,17 @@
               <label for="select-estado" id="label-estado">Estado:</label>
               <select name="estado" id="select-estado"></select>
             </div>
+
+            <div id="container-cep">
+              <label for="input-cep" id="label-cep">CEP:</label>
+              <input
+                type="number"
+                name="cep"
+                id="input-cep"
+                placeholder="CEP"
+                required
+              />
+            </div>
           </div>
 
           <div id="container-cnpj">
@@ -105,10 +121,7 @@
             />
           </div>
 
-          <div id="container-cnh">
-            <label for="input-cnh" id="label-cnh">Envie sua CNH ou RG:</label>
-            <input type="file" name="cnh" id="input-cnh" required />
-          </div>
+          
 
           <div id="container-cartao-cnpj">
             <label for="input-cnpj" id="label-cartao-cnpj"
