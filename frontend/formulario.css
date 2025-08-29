@@ -71,18 +71,49 @@ body {
 #input-cpf,
 #input-tel,
 #input-email,
-#input-cnpj,
-#input-rua,
-#input-cidade
-
-
-/* #input-cartao-cnpj,
-#input-contrato-social,
-#input-cnh*/ { 
+#input-cnpj { 
   width: 50rem;
   height: 3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
+}
+
+#input-cidade  { 
+  width: 40rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-cep {
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-rua {  
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-numero {
+  width: 7rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#container-cep {
+flex-basis: calc(20% - 10px);
+}
+
+#container-rua {
+  flex-basis: calc(70% - 10px);
+}
+
+#container-numero {
+  flex-basis: calc(10% - 10px);
 }
 
 #input-bairro { 
@@ -92,28 +123,16 @@ body {
   border-radius: 0.5rem;
 }
 
-#input-numero {
-width: 8rem;
-  height: 3rem;
-  border: solid 0.15rem black;
-  border-radius: 0.5rem;
 
-}
 
 #select-estado { 
   width: 5rem;
-  height: 3rem;
+  height: 3.3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
 }
 
-#input-cep {
-width: 15rem;
-  height: 3rem;
-  border: solid 0.15rem black;
-  border-radius: 0.5rem;
 
-}
 
 #form-1 {
   display: flex;
@@ -137,11 +156,15 @@ width: 15rem;
   flex-wrap: wrap; 
 }
 
-#container-rua, #container-numero, #container-bairro, 
+#container-rua, #container-bairro, #container-numero, 
 #container-cidade, #container-estado, #container-cep {
   display: flex;
   flex-direction: column;
 }
+
+
+
+
 
 /* #container-bairro {
   width: 25rem;
