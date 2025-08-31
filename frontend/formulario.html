@@ -12,52 +12,60 @@
 
       <div class="background-2" id="background-2-branco">
         <form class="form-principal" id="form-1">
-          <div id="container-nome">
-            <label for="input-nome" id="label-nome">Nome Completo:</label>
-            <input
-              id="input-nome"
-              type="text"
-              name="nomeCompleto"
-              placeholder="Digite seu nome completo"
-              autofocus
-              required
-            />
-          </div>
-          <div id="container-cpf">
-            <label for="input-cpf" id="label-cpf">CPF:</label>
-            <input class="cpf-input" id="input-cpf" type="number" name="cpf" />
-          </div>
+          <div id="container-nome-cpf">
+            <div id="container-nome">
+              <label for="input-nome" id="label-nome">Nome Completo:</label>
+              <input
+                id="input-nome"
+                type="text"
+                name="nomeCompleto"
+                placeholder="Digite seu nome completo"
+                autofocus
+                required
+              />
+            </div>
+            <div id="container-cpf">
+              <label for="input-cpf" id="label-cpf">CPF:</label>
+              <input
+                class="cpf-input"
+                id="input-cpf"
+                type="number"
+                name="cpf"
+              />
+            </div>
 
-          <div id="container-cnh">
-            <label for="input-cnh" id="label-cnh">Envie sua CNH ou RG:</label>
-            <input type="file" name="cnh" id="input-cnh" required />
-          </div>
-
-          <div id="container-telefone">
-            <label for="input-tel" id="label-tel">Telefone:</label>
-            <input
-              type="tel"
-              name="telefone"
-              id="input-tel"
-              placeholder="Digite seu telefone"
-              required
-            />
-          </div>
-
-          <div id="container-email">
-            <label for="input-email" id="label-email">E-mail:</label>
-            <input
-              type="email"
-              name="email"
-              id="input-email"
-              placeholder="Digite seu e-mail"
-              required
-            />
+            <div id="container-telefone">
+              <label for="input-tel" id="label-tel">Telefone:</label>
+              <input
+                type="tel"
+                name="telefone"
+                id="input-tel"
+                placeholder="Digite seu telefone"
+                required
+              />
+            </div>
           </div>
 
-          <div id="container-endereco">
+          <div id="container-email-cnh">
+            <div id="container-email">
+              <label for="input-email" id="label-email">E-mail:</label>
+              <input
+                type="email"
+                name="email"
+                id="input-email"
+                placeholder="Digite seu e-mail"
+                required
+              />
+            </div>
 
-<div id="container-cep">
+            <div id="container-cnh">
+              <label for="input-cnh" id="label-cnh">Envie sua CNH ou RG:</label>
+              <input type="file" name="cnh" id="input-cnh" required />
+            </div>
+          </div>
+
+          <div id="container-cep-rua-numero">
+            <div id="container-cep">
               <label for="input-cep" id="label-cep">CEP:</label>
               <input
                 type="number"
@@ -83,7 +91,9 @@
               <label for="input-numero" id="label-numero">Número</label>
               <input type="number" name="numero" id="input-numero" required />
             </div>
+          </div>
 
+          <div id="container-bairro-cidade-uf">
             <div id="container-bairro">
               <label for="input-bairro" id="label-bairro">Bairro:</label>
               <input
@@ -109,10 +119,10 @@
               <label for="select-estado" id="label-estado">UF:</label>
               <select name="estado" id="select-estado"></select>
             </div>
-
-            
           </div>
 
+
+          <div id="container-cnpj-responsavel">
           <div id="container-cnpj">
             <label for="input-cnpj" id="label-cnpj">CNPJ:</label>
             <input
@@ -124,7 +134,12 @@
             />
           </div>
 
-          
+          <div id="container-responsavel">
+            <label for="input-responsavel" id="label-responsavel">Nome do sócio ou responsável pela empresa:</label>
+            <input type="text" name="responsavel" id="input-responsavel" 
+            placeholder="Nome do sócio ou responsavel pela empresa" required>
+          </div>
+          </div>
 
           <div id="container-cartao-cnpj">
             <label for="input-cnpj" id="label-cartao-cnpj"

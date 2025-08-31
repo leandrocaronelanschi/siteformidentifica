@@ -62,17 +62,44 @@ body {
 #label-numero,
 #label-cidade,
 #label-estado,
-#label-cep {
+#label-cep,
+#label-responsavel {
   font-family: "WorksSans";
   font-size: 1.5rem;
 }
 
-#input-nome,
-#input-cpf,
-#input-tel,
-#input-email,
+
+
 #input-cnpj { 
-  width: 50rem;
+  width: 20rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-nome { 
+  width: 40rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-email { 
+  width: 30rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-tel { 
+  width: 15rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-cpf { 
+  width: 15rem;
   height: 3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
@@ -86,12 +113,14 @@ body {
 }
 
 #input-cep {
+  width: 15rem;
   height: 3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
 }
 
 #input-rua {  
+  width: 40rem;
   height: 3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
@@ -104,20 +133,17 @@ body {
   border-radius: 0.5rem;
 }
 
-#container-cep {
-flex-basis: calc(20% - 10px);
-}
 
-#container-rua {
-  flex-basis: calc(70% - 10px);
-}
-
-#container-numero {
-  flex-basis: calc(10% - 10px);
-}
 
 #input-bairro { 
   width: 25rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#input-responsavel { 
+  width: 35rem;
   height: 3rem;
   border: solid 0.15rem black;
   border-radius: 0.5rem;
@@ -150,16 +176,43 @@ flex-basis: calc(20% - 10px);
   width: 40rem;
 }
 
-#container-endereco {
+/* #container-endereco {
   display: flex;
   flex-direction: row; 
   flex-wrap: wrap; 
-}
+} */
 
 #container-rua, #container-bairro, #container-numero, 
-#container-cidade, #container-estado, #container-cep {
+#container-cidade, #container-estado, #container-cep,
+#container-responsavel {
   display: flex;
   flex-direction: column;
+}
+
+#container-nome-cpf {
+  display: flex;
+  gap: 2rem;
+}
+
+#container-email-cnh {
+  display: flex;
+  gap: 5rem;
+}
+
+#container-cep-rua-numero {
+  display: flex;
+  gap: 3rem;
+}
+
+#container-bairro-cidade-uf {
+display: flex;
+gap: 3rem;
+
+}
+
+#container-cnpj-responsavel {
+  display: flex;
+  gap: 5rem;
 }
 
 
