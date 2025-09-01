@@ -22,9 +22,12 @@ body {
 }
 
 #retangulo-azul-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
   width: 42.5rem;
   height: 65rem;
-  background: linear-gradient(to top, #0a2449, #1c4a8c);
+  background: linear-gradient(to bottom, #0a2449 50%, #1c4a8c);
   border-radius: 0.5rem 0 0 0.5rem;
 }
 
@@ -173,7 +176,14 @@ body {
 }
 
 #btn-enviar1 {
-  width: 40rem;
+  width: 50rem;
+  height: 3.5rem;
+  align-self: center;
+  margin-top: 2rem;
+  background: #1c4a8c;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
 }
 
 /* #container-endereco {
@@ -215,34 +225,75 @@ gap: 3rem;
   gap: 5rem;
 }
 
-
-
-
-
-/* #container-bairro {
-  width: 25rem;
-} */
-
-/* Regra para o primeiro elemento (20%)
-#container-rua {
-  flex-basis: calc(60% - 7px);
+#background-2-branco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-Regra para o segundo elemento (50%) 
-#container-numero {
-  flex-basis: calc(15% - 7px);
+/*------------------------ LADO AZUL ----------*/
+
+#img-logo {
+
+  width: 30rem;
 }
 
- Regra para o terceiro elemento (30%) 
-#container-bairro {
-  flex-basis: calc(25% - 7px);
-} */
+#container-azul-texto2 {
+  color: white;
+  font-family: "WorksSans";
+  width: 35rem;
+  font-size: 1.5rem;
+}
+
+#container-azul-h2-text1 {
+
+  color: white;
+  font-family: "WorksSans";
+}
+
+#container-logo-tex1-text2 {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+  #text-duvidas {
+    color: white;
+    font-size: 1.5rem;
+    font-family: "WorksSans";
+  }
+
+  #img-whatsapp {
+    width: 3rem;
+  }
+
+  #tel-whatsapp {
+    color: white;
+    font-size: 2rem;
+    font-family: "WorksSans";
+    margin-left: 1rem;
+  }
+
+  #container-logowhatsapp-tel {
+    display: flex;
+    
+  }
+
+  #ancora-whatsapp {    
+    text-decoration: none;    
+  }
+
+  #container-textduvidas-whatsapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 
-/* #label-cartao-cnpj,
-#label-contrato-social,
-#label-cnh {
-
-text-decoration:underline black;
-
-} */
+input::placeholder {
+  padding-left: 1rem;
+}
