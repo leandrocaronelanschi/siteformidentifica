@@ -13,6 +13,9 @@ html {
 
 body {
   background: black;
+  display: flex;
+  justify-content: center;
+  
 }
 
 #background-1 {
@@ -180,7 +183,7 @@ body {
   height: 3.5rem;
   align-self: center;
   margin-top: 2rem;
-  background: #1c4a8c;
+  background: #0e3264;
   color: white;
   border-radius: 0.5rem;
   font-size: 1.8rem;
@@ -271,19 +274,21 @@ gap: 3rem;
   }
 
   #tel-whatsapp {
-    color: white;
-    font-size: 2rem;
-    font-family: "WorksSans";
-    margin-left: 1rem;
+    
   }
 
   #container-logowhatsapp-tel {
     display: flex;
+    align-items: center;
     
   }
 
   #ancora-whatsapp {    
-    text-decoration: none;    
+    text-decoration: none; 
+    color: white;
+    font-size: 2rem;
+    font-family: "WorksSans";
+    margin-left: 1rem;   
   }
 
   #container-textduvidas-whatsapp {
