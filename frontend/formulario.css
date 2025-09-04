@@ -69,7 +69,9 @@ body {
 #label-cidade,
 #label-estado,
 #label-cep,
-#label-responsavel {
+#label-responsavel,
+#label-tipo-certificado,
+#label-data-video {
   font-family: "WorksSans";
   font-size: 1.5rem;
 }
@@ -232,6 +234,83 @@ gap: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#container-cartao-cnpj {
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+  width: 35rem;
+  height: 6rem;
+  
+}
+
+#container-contrato-social {
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+  width: 38rem;
+  height: 6rem;
+}
+
+#container-cartaocnpj-contratosocial {
+  display: flex;
+  gap: 5rem;
+}
+
+#container-tipo-certificado {
+  display: flex;
+  flex-direction: column;
+}
+
+#container-data-video {
+  display: flex;
+  flex-direction: column;
+}
+
+#input-tipo-certificado {
+ width: 30rem;
+  height: 3.3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem; 
+}
+
+#input-data-video {
+  width: 35rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
+#container-tipo-data {
+  display: flex;
+  gap: 5rem;
+}
+
+#label-contrato-social, #input-contrato-social,
+#label-cartao-cnpj, #input-cartao-cnpj  {
+  padding-left: 1rem;
+}
+
+#input-data-video {
+  width: 12rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+  font-family: "WorksSans";
+  font-size: 1.5rem;
+}
+
+#select-hora {
+ width: 12rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+  font-family: "WorksSans";
+  font-size: 1.5rem; 
+}
+
+#container-data-hora {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*------------------------ LADO AZUL ----------*/

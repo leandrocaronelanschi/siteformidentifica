@@ -52,6 +52,30 @@
         <div id="container-dados">
         
         <form class="form-principal" id="form-1">
+
+<div id="container-tipo-data">
+
+<div id="container-tipo-certificado">
+  <label for="input-tipo-certificado" id="label-tipo-certificado">Escolha o tipo de Certificado Digital:</label>
+  <select name="tipocertificado" id="input-tipo-certificado">
+    <option>Certificado Digital para CPF</option>
+    <option>Certificado Digital para CNPJ</option>
+  </select>
+</div>
+
+<div id="container-data-video">
+  <label for="input-data-video" id="label-data-video">Escolha a data e horário da videoconferencia</label>
+  <!-- <select name="data-marcada" id="select-nome-dia">
+    
+  </select> -->
+  <div id="container-data-hora">
+  <input type="date" name="data-video" id="input-data-video" required>
+  <select name="hora-video" id="select-hora" required></select>
+  <label for="select-hora" id="label-hora">Horas</label>
+  </div>
+</div>
+</div>
+
           <div id="container-nome-cpf">
             <div id="container-nome">
               <label for="input-nome" id="label-nome">Nome Completo:</label>
@@ -181,6 +205,8 @@
           </div>
           </div>
 
+          <div id="container-cartaocnpj-contratosocial">
+
           <div id="container-cartao-cnpj">
             <label for="input-cnpj" id="label-cartao-cnpj"
               >Envie seu cartão de CNPJ:</label
@@ -203,6 +229,8 @@
               id="input-contrato-social"
               required
             />
+          </div>
+
           </div>
 
           <button type="submit" id="btn-enviar1">Enviar dados</button>
