@@ -1,0 +1,78 @@
+@font-face {
+  font-family: WorksSans;
+  src: url("/frontend/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto" ;
+  src: url("/frontend/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+html {
+  /* Define a base de cálculo para a unidade 'rem' (1rem = 10px) */
+  font-size: 62.5%;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+#container-header {
+  background: #003b72;
+  width: 100%;
+  height: 30dvh;
+}
+
+#img-header-logo {
+  width: 50rem;
+}
+
+#h1-header {
+  color: white;
+  font-family: "Roboto";
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
+}
+
+#container-header-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+#container-main {
+    display: flex;
+    justify-content: center;
+}
+
+#container-section {
+    
+    width: 120rem;
+    height: 20rem;
+    
+    border-radius: 0.5rem;
+    margin-top: 10rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+
+}
+
+#container-section-titulo {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* #container-footer {
+    background-color: #333;
+    width: 100%;
+    height: 20dvh;
+    
+} */
