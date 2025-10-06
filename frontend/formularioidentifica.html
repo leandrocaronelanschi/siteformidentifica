@@ -1,75 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-     
     <meta charset="UTF-8" />
-     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     
     <title>formulário</title>
-     
     <link rel="stylesheet" href="/frontend/formularioidentifica.css" />
   </head>
   <body>
-     
     <header id="container-header">
-         
       <div id="container-header-div">
-             
         <img
           id="img-header-logo"
           src="/frontend/images/logoidentificahorizontal.svg"
         />
-             
         <h1 id="h1-header">Certificados Digitais</h1>
-           
       </div>
-       
     </header>
 
-     
     <main id="container-main">
-         
       <section id="container-section">
-             
         <h1 id="section-titulo-1">Escolha o tipo de Certificado Digital</h1>
-             
         <h2 id="section-titulo-2">
-                  Escolha a opção de Certificado Digital para empresa (CNPJ) ou
-                  Certificado Digital para Pessoa Física (CPF)      
+          Escolha a opção de Certificado Digital para empresa (CNPJ) ou
+          Certificado Digital para Pessoa Física (CPF)
         </h2>
-             
         <div class="container-button-opcao">
-                 
           <button id="opcao-cnpj" type="button">
-                      Certificado Digital para Empresa - e-CNPJ        
+            Certificado Digital para Empresa - e-CNPJ
           </button>
-                 
           <button id="opcao-cpf" type="button">
-                      Certificado Digital para Pessoa Física - e-CPF        
+            Certificado Digital para Pessoa Física - e-CPF
           </button>
-               
         </div>
-           
       </section>
 
-         
       <!-- Formulário CPF -->
-         
       <section id="section-cpf" class="oculto">
-             
         <form id="form-cpf" enctype="multipart/form-data">
-                 
           <div id="container-dados-cpf">
-                     
             <div id="containerecpf-nome-cpf">
-                         
               <div id="container-nome-ecpf">
-                             
                 <label for="input-nome-ecpf" id="label-nome-ecpf"
                   >Nome Completo:</label
                 >
-                             
                 <input
                   id="input-nome-ecpf"
                   type="text"
@@ -78,13 +51,9 @@
                   autofocus
                   required
                 />
-                           
               </div>
-                         
               <div id="container-cpf-ecpf">
-                             
-                <label for="input-cpf-ecpf" id="label-cpf-ecpf">CPF:</label>    
-                         
+                <label for="input-cpf-ecpf" id="label-cpf-ecpf">CPF:</label>
                 <input
                   class="no-spinner"
                   id="input-cpf-ecpf"
@@ -92,20 +61,14 @@
                   name="cpf"
                   required
                 />
-                           
               </div>
-                       
             </div>
 
-                     
             <div id="containerecpf-tel-email">
-                         
               <div id="container-telefone-ecpf">
-                             
                 <label for="input-tel-ecpf" id="label-tel-ecpf"
                   >Telefone:</label
                 >
-                             
                 <input
                   type="tel"
                   name="telefone"
@@ -113,16 +76,11 @@
                   placeholder="Digite seu telefone"
                   required
                 />
-                           
               </div>
-
-                         
               <div id="container-email-ecpf">
-                             
                 <label for="input-email-ecpf" id="label-email-ecpf"
                   >E-mail:</label
                 >
-                             
                 <input
                   type="email"
                   name="email"
@@ -130,18 +88,12 @@
                   placeholder="Digite seu e-mail"
                   required
                 />
-                           
               </div>
-                       
             </div>
 
-                     
             <div id="containerecpf-cep-rua-numero-ecpf">
-                         
               <div id="containerecpf-cep">
-                             
-                <label for="input-cep-ecpf" id="label-cep-ecpf">CEP:</label>    
-                         
+                <label for="input-cep-ecpf" id="label-cep-ecpf">CEP:</label>
                 <input
                   type="number"
                   name="cep"
@@ -150,14 +102,9 @@
                   placeholder="CEP"
                   required
                 />
-                           
               </div>
-
-                         
               <div id="container-rua-ecpf">
-                             
                 <label for="input-rua-ecpf" id="label-rua">Nome da rua:</label>
-                             
                 <input
                   type="text"
                   name="rua"
@@ -165,94 +112,59 @@
                   placeholder="Nome da rua"
                   required
                 />
-                           
               </div>
-
-                         
               <div id="container-numero-ecpf">
-                             
                 <label for="input-numero-ecpf" id="label-numero">Número</label>
-                             
                 <input
                   type="number"
                   name="numero"
                   id="input-numero-ecpf"
                   required
                 />
-                           
               </div>
-                       
             </div>
 
-                     
             <div id="container-cnh-ecpf">
-                         
               <label for="input-cnh-ecpf" id="label-cnh-ecpf"
                 >Envie sua CNH ou RG:</label
               >
-                         
-              <input type="file" name="cnh" id="input-cnh-ecpf" required />    
-                   
+              <input type="file" name="cnh" id="input-cnh-ecpf" required />
             </div>
-                     
-            <button type="submit" id="btn-enviar2">Enviar dados</button>        
+
+            <button type="submit" id="btn-enviar2">Enviar dados</button>
           </div>
-               
         </form>
-           
       </section>
 
-         
       <!-- Formulário CNPJ -->
-         
       <section id="section-cnpj" class="oculto">
-             
         <form id="form-cnpj" enctype="multipart/form-data">
-                 
           <div id="container-dados-cnpj">
-                     
             <h1 id="titulo1-section-cnpj">
-                          Preencha os dados abaixo e envie os dos documentos
-              solicitados.          
+              Preencha os dados abaixo e envie os dos documentos solicitados.
             </h1>
 
-                     
             <div id="container-data-video">
-                         
               <label for="input-data-video" id="label-data-video"
                 >Escolha a data e horário da videoconferencia</label
               >
-
-                         
               <div id="container-data-hora">
-                             
                 <input
                   type="date"
                   name="data-video"
                   id="input-data-video"
                   required
                 />
-
-                             
                 <div id="container-label-horas">
-                                 
                   <select name="hora-video" id="select-hora" required></select>
-                                 
-                  <label for="select-hora" id="label-hora">Horas</label>        
-                       
+                  <label for="select-hora" id="label-hora">Horas</label>
                 </div>
-                           
               </div>
-                       
             </div>
 
-                     
             <div id="container-cnpj-nome">
-                         
               <div id="container-cnpj">
-                             
-                <label for="input-cnpj" id="label-cnpj">CNPJ:</label>          
-                   
+                <label for="input-cnpj" id="label-cnpj">CNPJ:</label>
                 <input
                   type="number"
                   name="cnpj"
@@ -261,16 +173,11 @@
                   placeholder="Somente números"
                   required
                 />
-                           
               </div>
-
-                         
               <div id="container-responsavel">
-                             
                 <label for="input-responsavel" id="label-responsavel"
                   >Nome do sócio ou responsável pela empresa:</label
                 >
-                             
                 <input
                   type="text"
                   name="responsavel"
@@ -280,17 +187,12 @@
                   maxlength="52"
                   required
                 />
-                           
               </div>
-                       
             </div>
-                     
+
             <div id="container-tel-email">
-                         
               <div id="container-telefone">
-                             
-                <label for="input-tel" id="label-tel">Telefone:</label>        
-                     
+                <label for="input-tel" id="label-tel">Telefone:</label>
                 <input
                   type="tel"
                   name="telefone"
@@ -298,14 +200,9 @@
                   placeholder="Digite seu telefone"
                   required
                 />
-                           
               </div>
-
-                         
               <div id="container-email">
-                             
-                <label for="input-email" id="label-email">E-mail:</label>      
-                       
+                <label for="input-email" id="label-email">E-mail:</label>
                 <input
                   type="email"
                   name="email"
@@ -313,44 +210,32 @@
                   placeholder="Digite seu e-mail"
                   required
                 />
-                           
               </div>
-                       
             </div>
 
-                     
             <div id="container-cnh-cnpj">
-                         
               <label for="input-cnh-cnpj" id="label-cnh"
                 >Envie sua CNH ou RG:</label
               >
-                         
-              <input type="file" name="cnh" id="input-cnh-cnpj" required />    
-                   
+              <input type="file" name="cnh" id="input-cnh-cnpj" required />
             </div>
 
-                     
             <div id="container-cartao-cnpj">
-                         
               <label for="input-cartao-cnpj" id="label-cartao-cnpj"
                 >Envie o cartão de CNPJ:</label
               >
-                         
               <input
                 type="file"
                 name="cartao-cnpj"
                 id="input-cartao-cnpj"
                 required
               />
-                       
             </div>
-                     
+
             <div id="container-contrato-social">
-                         
               <label for="input-contrato-social" id="label-contrato-social"
                 >Envie o Contrato Social ou CCMEI da empresa:</label
               >
-                         
               <input
                 type="file"
                 name="contrato-social"
@@ -358,55 +243,37 @@
                 multiple
                 required
               />
-                       
             </div>
-                   
           </div>
-                  <button type="submit" id="btn-enviar1">Enviar dados</button>  
-             
+
+          <button type="submit" id="btn-enviar1">Enviar dados</button>
         </form>
-           
       </section>
-       
     </main>
 
-     
     <footer id="container-footer">
-         
       <div id="container-textduvidas-whatsapp">
-             
         <p id="text-duvidas">
-                  Está com dúvidas? Fale conosco! Clique no Whatsapp abaixo.    
-           
+          Está com dúvidas? Fale conosco! Clique no Whatsapp abaixo.
         </p>
-             
         <div id="container-logowhatsapp-tel">
-                 
-          <img id="img-whatsapp" src="./images/SIMBOLO WHATSAPP SVG.svg" />    
-             
+          <img id="img-whatsapp" src="./images/SIMBOLO WHATSAPP SVG.svg" />
           <div id="ancoras-whatsapp">
-                     
             <a
               id="ancora-whatsapp-sp"
               href="https://api.whatsapp.com/send?phone=5511961792134"
               >(11) 99679-2134</a
             >
-                     
             <a
               id="ancora-whatsapp-es"
               href="https://api.whatsapp.com/send?phone=5527992528168"
               >(27) 99252-8168</a
             >
-                   
           </div>
-               
         </div>
-           
       </div>
-       
     </footer>
 
-     
     <script src="/frontend/formularioidentifica.js"></script>
   </body>
 </html>
