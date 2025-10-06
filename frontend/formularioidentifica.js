@@ -1,19 +1,45 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.getElementById("section-cpf").style.display = "none";
+//   document.getElementById("section-cnpj").style.display = "none";
+// });
+
+// const btnCpf = document.getElementById("opcao-cpf");
+// const btnCnpj = document.getElementById("opcao-cnpj");
+
+// btnCnpj.addEventListener("click", function () {
+//   document.getElementById("section-cnpj").style.display = "flex";
+//   document.getElementById("section-cpf").style.display = "none";
+// });
+
+// btnCpf.addEventListener("click", function () {
+//   document.getElementById("section-cpf").style.display = "flex";
+//   document.getElementById("section-cnpj").style.display = "none";
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("section-cpf").style.display = "none";
-  document.getElementById("section-cnpj").style.display = "none";
+  // Esconda o CNPJ e o CPF (para seguir a lógica inicial do seu JS)
+  document.getElementById("section-cpf").classList.add("oculto");
+  document.getElementById("section-cnpj").classList.add("oculto");
+
+  // **Ação adicional:** Clique no botão CPF para mostrar o formulário padrão ao carregar
+  // document.getElementById("opcao-cpf").click();
 });
 
 const btnCpf = document.getElementById("opcao-cpf");
 const btnCnpj = document.getElementById("opcao-cnpj");
 
 btnCnpj.addEventListener("click", function () {
-  document.getElementById("section-cnpj").style.display = "flex";
-  document.getElementById("section-cpf").style.display = "none";
+  // CNPJ aparece (remove a classe oculto)
+  document.getElementById("section-cnpj").classList.remove("oculto");
+  // CPF some (adiciona a classe oculto)
+  document.getElementById("section-cpf").classList.add("oculto");
 });
 
 btnCpf.addEventListener("click", function () {
-  document.getElementById("section-cpf").style.display = "flex";
-  document.getElementById("section-cnpj").style.display = "none";
+  // CPF aparece (remove a classe oculto)
+  document.getElementById("section-cpf").classList.remove("oculto");
+  // CNPJ some (adiciona a classe oculto)
+  document.getElementById("section-cnpj").classList.add("oculto");
 });
 
 const horarios = [

@@ -36,58 +36,65 @@
 
       <!--------------- Formulario CPF -------------------->
 
-      <section id="section-cpf">
+      <section id="section-cpf" class="oculto">
         <div id="container-dados-cpf">
-          <div id="container-nome-ecpf">
-            <label for="input-nome" id="label-nome-ecpf">Nome Completo:</label>
-            <input
-              id="input-nome-ecpf"
-              type="text"
-              name="nomeCompleto"
-              placeholder="Digite seu nome completo"
-              autofocus
-              required
-            />
-          </div>
-          <div id="container-cpf-ecpf">
-            <label for="input-cpf" id="label-cpf-ecpf">CPF:</label>
-            <input
-              class="cpf-input"
-              id="input-cpf-ecpf"
-              type="number"
-              name="cpf"
-            />
-          </div>
-
-          <div id="container-telefone-ecpf">
-            <label for="input-tel" id="label-tel">Telefone:</label>
-            <input
-              type="tel"
-              name="telefone"
-              id="input-tel-ecpf"
-              placeholder="Digite seu telefone"
-              required
-            />
+          <div id="containerecpf-nome-cpf">
+            <div id="container-nome-ecpf">
+              <label for="input-nome" id="label-nome-ecpf"
+                >Nome Completo:</label
+              >
+              <input
+                id="input-nome-ecpf"
+                type="text"
+                name="nomeCompleto"
+                placeholder="Digite seu nome completo"
+                autofocus
+                required
+              />
+            </div>
+            <div id="container-cpf-ecpf">
+              <label for="input-cpf" id="label-cpf-ecpf">CPF:</label>
+              <input
+                class="no-spinner"
+                id="input-cpf-ecpf"
+                type="number"
+                name="cpf"
+              />
+            </div>
           </div>
 
-          <div id="container-email-ecpf">
-            <label for="input-email" id="label-email-ecpf">E-mail:</label>
-            <input
-              type="email"
-              name="email"
-              id="input-email-ecpf"
-              placeholder="Digite seu e-mail"
-              required
-            />
+          <div id="containerecpf-tel-email">
+            <div id="container-telefone-ecpf">
+              <label for="input-tel" id="label-tel-ecpf">Telefone:</label>
+              <input
+                type="tel"
+                name="telefone"
+                id="input-tel-ecpf"
+                placeholder="Digite seu telefone"
+                required
+              />
+            </div>
+
+            <div id="container-email-ecpf">
+              <label for="input-email" id="label-email-ecpf">E-mail:</label>
+              <input
+                type="email"
+                name="email"
+                id="input-email-ecpf"
+                placeholder="Digite seu e-mail"
+                required
+              />
+            </div>
           </div>
 
-          <div id="container-cep-rua-numero-ecpf">
-            <div id="container-cep">
+          <div id="containerecpf-cep-rua-numero-ecpf">
+            <div id="containerecpf-cep">
               <label for="input-cep-ecpf" id="label-cep-ecpf">CEP:</label>
               <input
                 type="number"
                 name="cep"
                 id="input-cep-ecpf"
+                class="no-spinner"
                 placeholder="CEP"
                 required
               />
@@ -128,7 +135,7 @@
 
       <!-----------F0rmulario CNPJ--------------->
 
-      <section id="section-cnpj">
+      <section id="section-cnpj" class="oculto">
         <div id="container-dados-cnpj">
           <h1 id="titulo1-section-cnpj">
             Preencha os dados abaixo e envie os dos documentos solicitados.

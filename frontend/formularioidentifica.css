@@ -68,6 +68,10 @@ body {
   font-size: 2.5rem;
 }
 
+.oculto {
+  display: none !important;
+}
+
 #opcao-cnpj {
   width: 34rem;
   /* height: 4rem; */
@@ -111,41 +115,186 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   border-radius: 0.5rem;
-  width: 70rem;
+  width: 75rem;
   padding: 5rem;
   margin-top: 5rem;
   background-color: rgb(228, 227, 227);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#container-dados-cpf {
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+#containerecpf-nome-cpf {
+  display: flex;
+  width: 100%;
+  gap: 5em;
+}
+
 #container-nome-ecpf {
   display: flex;
+  width: 70%;
   flex-direction: column;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
 }
 
 #container-cpf-ecpf {
   display: flex;
+  width: 30%;
   flex-direction: column;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+#containerecpf-tel-email {
+  display: flex;
+  width: 100%;
+  gap: 5em;
 }
 
 #container-telefone-ecpf {
   display: flex;
+  width: 30%;
   flex-direction: column;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+#input-tel-ecpf {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  box-sizing: border-box;
+  padding: 0 1rem;
 }
 
 #container-email-ecpf {
   display: flex;
   flex-direction: column;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  width: 70%;
+}
+
+#input-email-ecpf {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+#containerecpf-cep-rua-numero-ecpf {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  border: 1px solid rgb(119, 119, 119);
+  box-sizing: border-box;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  gap: 1em;
+}
+
+#containerecpf-cep {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+#input-cep-ecpf {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+#container-rua-ecpf {
+  display: flex;
+  flex-direction: column;
+  width: 72%;
+}
+
+#input-rua-ecpf {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+#container-numero-ecpf {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+#input-numero-ecpf {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 #container-cnh-ecpf {
   display: flex;
   flex-direction: column;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
 }
 
-#container-cep-rua-numero-ecpf {
-  display: flex;
+#label-nome-ecpf,
+#label-cpf-ecpf,
+#label-tel-ecpf,
+#label-email-ecpf,
+#label-cep-ecpf,
+#label-rua,
+#label-numero,
+#label-cnh-ecpf {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+}
+
+#input-nome-ecpf {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+#input-cpf-ecpf {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  box-sizing: border-box;
+  padding: 0 1rem;
 }
 
 /*---------------Final e-CPF-----------------*/
@@ -163,8 +312,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#container-dados-cnpj,
-#container-dados-cpf {
+#container-dados-cnpj {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
