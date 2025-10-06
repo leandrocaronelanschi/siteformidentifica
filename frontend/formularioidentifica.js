@@ -1,21 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   document.getElementById("section-cpf").style.display = "none";
-//   document.getElementById("section-cnpj").style.display = "none";
-// });
-
-// const btnCpf = document.getElementById("opcao-cpf");
-// const btnCnpj = document.getElementById("opcao-cnpj");
-
-// btnCnpj.addEventListener("click", function () {
-//   document.getElementById("section-cnpj").style.display = "flex";
-//   document.getElementById("section-cpf").style.display = "none";
-// });
-
-// btnCpf.addEventListener("click", function () {
-//   document.getElementById("section-cpf").style.display = "flex";
-//   document.getElementById("section-cnpj").style.display = "none";
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   // Esconda o CNPJ e o CPF (para seguir a lógica inicial do seu JS)
   document.getElementById("section-cpf").classList.add("oculto");

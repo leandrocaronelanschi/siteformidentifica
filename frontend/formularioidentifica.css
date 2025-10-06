@@ -297,6 +297,17 @@ body {
   padding: 0 1rem;
 }
 
+#btn-enviar2 {
+  width: 50rem;
+  height: 4rem;
+  align-self: center;
+  margin-top: 5rem;
+  background: #0e3264;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+}
+
 /*---------------Final e-CPF-----------------*/
 
 #section-cnpj {
