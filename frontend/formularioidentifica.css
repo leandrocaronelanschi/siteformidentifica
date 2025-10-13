@@ -1,3 +1,10 @@
+/* Tamanho de telas:
+
+Celular: 360 x 667
+tablet: 768 x 1024 
+Notebook: 1024 x 800
+Desktop: 1920 x 1080 */
+
 @font-face {
   font-family: WorksSans;
   src: url("/frontend/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf")
@@ -23,9 +30,12 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 /* ------------- Header ------------ */
@@ -36,17 +46,16 @@ body {
   align-items: center;
   background: #0b274e;
   width: 100%;
-  height: 30%;
 }
 
 #img-header-logo {
-  width: 30%;
+  width: 55rem;
 }
 
 #h1-header {
   color: white;
   font-family: "Roboto";
-  font-size: 2vw;
+  font-size: 4rem;
   letter-spacing: 0.15rem;
 }
 
@@ -54,9 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5rem;
-  width: 100%;
-  height: 100%;
+  padding-top: 3rem;
 }
 
 /* ------------- Fim Header ------------ */
@@ -66,6 +73,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-grow: 1;
 }
 
 #container-section {
@@ -74,23 +82,23 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 50%;
-  height: 30vh;
+  width: 85rem;
+  padding: 4rem;
   border-radius: 0.5rem;
-  margin-top: 10rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   background-color: white;
-  gap: 2rem;
-  border: 1px solid black;
+  gap: 4rem;
 }
 
 #section-titulo-1 {
-  font-size: 2.5rem;
+  display: flex;
+  font-size: 3rem;
+  margin: 0;
 }
 
-#section-titulo-2 {
+/* #section-titulo-2 {
   font-size: 1.7rem;
-}
+} */
 
 .oculto {
   display: none !important;
@@ -106,6 +114,48 @@ body {
   background-color: #0e3264;
   color: white;
   padding: 2rem;
+}
+
+#descricao-button-cnpj {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  /* padding: 1.5rem;
+  box-sizing: border-box; */
+}
+
+#descricao-h1-button-cnpj {
+  font-size: 1.7rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+#descricao-h2-button-cnpj {
+  font-size: 3rem;
+  margin: 0;
+}
+
+#descricao-button-cpf {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  /* padding: 1.5rem;
+  box-sizing: border-box; */
+}
+
+#descricao-h1-button-cpf {
+  font-size: 1.7rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+#descricao-h2-button-cpf {
+  font-size: 3rem;
+  margin: 0;
 }
 
 #opcao-cnpj:hover {
@@ -131,7 +181,7 @@ body {
 
 .container-button-opcao {
   display: flex;
-  gap: 3rem;
+  gap: 3.5rem;
 }
 
 #section-cpf {
@@ -484,8 +534,10 @@ body {
 #container-footer {
   background-color: #333;
   width: 100%;
-  height: 20dvh;
-  margin-top: 20rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: center;
 }
 
 #titulo1-section-cnpj {
@@ -531,50 +583,53 @@ body {
   width: 25rem;
   color: white;
   font-size: 1.5rem;
-  font-family: "WorksSans";
+  font-family: "Roboto";
   text-align: center;
+  margin: 0;
 }
 
 #img-whatsapp {
-  width: 4rem;
+  width: 3rem;
+  padding: 0.5rem;
 }
 
 #container-logowhatsapp-tel {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #ancora-whatsapp-sp {
   text-decoration: none;
   color: white;
-  font-size: 2rem;
-  font-family: "WorksSans";
-  margin-left: 1rem;
-  border: solid 0.15rem black;
+  font-size: 1.6rem;
+  font-family: "Roboto";
+  border: solid 0.15rem rgb(75, 75, 75);
   border-radius: 0.5rem;
   padding: 0.5rem;
-  width: 16rem;
-  height: 2.5rem;
+  width: 14rem;
   text-align: center;
   background: #0e3264;
-}
-
-#ancora-whatsapp-sp:hover {
-  background: radial-gradient(#1851a1, #203555);
+  align-items: center;
 }
 
 #ancora-whatsapp-es {
   text-decoration: none;
   color: white;
-  font-size: 2rem;
-  font-family: "WorksSans";
-  margin-left: 1rem;
-  border: solid 0.15rem black;
+  font-size: 1.6rem;
+  font-family: "Roboto";
+  border: solid 0.15rem rgb(75, 75, 75);
   border-radius: 0.5rem;
   padding: 0.5rem;
-  width: 16rem;
-  height: 2.5rem;
+  width: 14rem;
   text-align: center;
   background: #0e3264;
+  justify-content: center;
+  align-items: center;
+}
+
+#ancora-whatsapp-sp:hover {
+  background: radial-gradient(#1851a1, #203555);
 }
 
 #ancora-whatsapp-es:hover {
@@ -583,14 +638,35 @@ body {
 
 #ancoras-whatsapp {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  gap: 2.5rem;
   align-items: center;
 }
 
 #container-textduvidas-whatsapp {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#container-cidade-tel-es,
+#container-cidade-tel-sp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+}
+
+#descricao-cidade-tel-es,
+#descricao-cidade-tel-sp {
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+
+#container-text-duvidas {
+  display: flex;
+  margin-bottom: 1rem;
 }

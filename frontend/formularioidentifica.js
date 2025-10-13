@@ -39,11 +39,14 @@ const btnCnpj = document.getElementById("opcao-cnpj");
 btnCnpj.addEventListener("click", function () {
   document.getElementById("section-cnpj").classList.remove("oculto");
   document.getElementById("section-cpf").classList.add("oculto");
+  const containerSection = document.getElementById("container-section");
+  containerSection.style.marginTop = "5rem";
 });
 
 btnCpf.addEventListener("click", function () {
   document.getElementById("section-cpf").classList.remove("oculto");
   document.getElementById("section-cnpj").classList.add("oculto");
+  containerSection.style.marginTop = "5rem";
 });
 
 // Função para envio via fetch usando FormData
