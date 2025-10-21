@@ -48,6 +48,39 @@
       <section id="section-cpf" class="oculto">
         <form id="form-cpf" enctype="multipart/form-data">
           <div id="container-dados-cpf">
+            <h1 id="titulo1-section-cpf">
+              Preencha os dados abaixo e envie os dos documentos solicitados.
+            </h1>
+
+            <div id="container-model-cert">
+              <label id="label-model-cert" for="select-model-cert"
+                >Escolha o modelo do Certificado Digital</label
+              >
+              <select id="select-model-cert"></select>
+            </div>
+
+            <fieldset id="container-datavideo-cpf">
+              <legend for="input-datavideo-cpf" id="label-datavideo-cpf">
+                Escolha a data e horário da videoconferência
+              </legend>
+              <div id="container-data-hora-cpf">
+                <input
+                  type="date"
+                  name="data-video-cpf"
+                  id="input-datavideo-cpf"
+                  required
+                />
+                <div id="container-label-horas-cpf">
+                  <select
+                    name="hora-video-cpf"
+                    id="select-hora-cpf"
+                    required
+                  ></select>
+                  <label for="select-hora-cpf" id="label-hora-cpf">Horas</label>
+                </div>
+              </div>
+            </fieldset>
+
             <div id="containerecpf-nome-cpf">
               <div id="container-nome-ecpf">
                 <label for="input-nome-ecpf" id="label-nome-ecpf"
@@ -67,8 +100,9 @@
                 <input
                   class="no-spinner"
                   id="input-cpf-ecpf"
-                  type="number"
+                  type="text"
                   name="cpf"
+                  placeholder="000.000.000-00"
                   required
                 />
               </div>
@@ -83,7 +117,7 @@
                   type="tel"
                   name="telefone"
                   id="input-tel-ecpf"
-                  placeholder="Digite seu telefone"
+                  placeholder="(00) 00000-0000"
                   required
                 />
               </div>
@@ -134,15 +168,42 @@
               </div>
             </div>
 
+            <div id="containerecpf-bairro-cidade-uf">
+              <div id="containerecpf-bairro">
+                <label for="input-bairro" id="label-bairro">Bairro:</label>
+                <input
+                  type="text"
+                  name="bairro"
+                  id="inputecpf-bairro"
+                  placeholder="Digite o nome do bairro"
+                  required
+                />
+              </div>
+
+              <div id="containerecpf-cidade">
+                <label for="input-cidade" id="label-cidade">Cidade:</label>
+                <input
+                  type="text"
+                  name="cidade"
+                  id="inputecpf-cidade"
+                  placeholder="Nome da cidade"
+                />
+              </div>
+
+              <div id="containerecpf-estado">
+                <label for="select-estado" id="label-estado">UF:</label>
+                <select name="estado" id="select-estado"></select>
+              </div>
+            </div>
+
             <div id="container-cnh-ecpf">
               <label for="input-cnh-ecpf" id="label-cnh-ecpf"
                 >Envie sua CNH ou RG:</label
               >
               <input type="file" name="cnh" id="input-cnh-ecpf" required />
             </div>
-
-            <button type="submit" id="btn-enviar2">Enviar dados</button>
           </div>
+          <button type="submit" id="btn-enviar2">Enviar dados</button>
         </form>
       </section>
 
@@ -154,10 +215,17 @@
               Preencha os dados abaixo e envie os dos documentos solicitados.
             </h1>
 
-            <div id="container-data-video">
-              <label for="input-data-video" id="label-data-video"
-                >Escolha a data e horário da videoconferencia</label
+            <div id="container-model-certcnpj">
+              <label id="label-model-certcnpj" for="select-model-certcnpj"
+                >Escolha o modelo do Certificado Digital</label
               >
+              <select id="select-model-certcnpj"></select>
+            </div>
+
+            <fieldset id="container-data-video">
+              <legend for="input-data-video" id="label-data-video">
+                Escolha a data e horário da videoconferência
+              </legend>
               <div id="container-data-hora">
                 <input
                   type="date"
@@ -170,17 +238,17 @@
                   <label for="select-hora" id="label-hora">Horas</label>
                 </div>
               </div>
-            </div>
+            </fieldset>
 
             <div id="container-cnpj-nome">
               <div id="container-cnpj">
                 <label for="input-cnpj" id="label-cnpj">CNPJ:</label>
                 <input
-                  type="number"
+                  type="tel"
                   name="cnpj"
                   class="no-spinner"
                   id="input-cnpj"
-                  placeholder="Somente números"
+                  placeholder="00.000.000/0000-00"
                   required
                 />
               </div>
@@ -207,7 +275,7 @@
                   type="tel"
                   name="telefone"
                   id="input-tel"
-                  placeholder="Digite seu telefone"
+                  placeholder="(00) 00000-0000"
                   required
                 />
               </div>
@@ -217,7 +285,7 @@
                   type="email"
                   name="email"
                   id="input-email"
-                  placeholder="Digite seu e-mail"
+                  placeholder="exemplo@exemplo.com.br"
                   required
                 />
               </div>
@@ -295,7 +363,7 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://unpkg.com/imask"></script>
     <script src="/frontend/formularioidentifica.js"></script>
   </body>
 </html>

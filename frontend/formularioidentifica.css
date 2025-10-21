@@ -189,9 +189,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   border-radius: 0.5rem;
-  width: 75rem;
+  width: 70rem;
   padding: 5rem;
   margin-top: 5rem;
   background-color: rgb(228, 227, 227);
@@ -200,9 +199,64 @@ body {
 
 #container-dados-cpf {
   display: flex;
-  width: 95%;
   flex-direction: column;
   gap: 2.5rem;
+}
+
+/* #titulo1-section-cpf {
+} */
+
+#container-model-cert {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#select-model-cert {
+  width: 90%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+#container-datavideo-cpf {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#input-datavideo-cpf {
+  width: 12rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+#container-modelo-hora-cpf {
+  display: flex;
+}
+
+#container-label-horas-cpf {
+  display: flex;
+  padding-left: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#select-hora-cpf {
+  width: 10rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 #containerecpf-nome-cpf {
@@ -211,7 +265,7 @@ body {
   gap: 5em;
 }
 
-#container-nome-ecpf {
+/* #container-nome-ecpf {
   display: flex;
   width: 70%;
   flex-direction: column;
@@ -219,9 +273,9 @@ body {
   padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: white;
-}
+} */
 
-#container-cpf-ecpf {
+/* #container-cpf-ecpf {
   display: flex;
   width: 30%;
   flex-direction: column;
@@ -229,7 +283,7 @@ body {
   padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: white;
-}
+} */
 
 #containerecpf-tel-email {
   display: flex;
@@ -241,14 +295,10 @@ body {
   display: flex;
   width: 30%;
   flex-direction: column;
-  border: 1px solid rgb(119, 119, 119);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  background-color: white;
 }
 
 #input-tel-ecpf {
-  width: 100%;
+  width: 13rem;
   height: 3.5rem;
   border-radius: 0.5rem;
   border: 1px solid rgb(119, 119, 119);
@@ -256,7 +306,7 @@ body {
   padding: 0 1rem;
 }
 
-#container-email-ecpf {
+/* #container-email-ecpf {
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(119, 119, 119);
@@ -264,7 +314,7 @@ body {
   border-radius: 0.5rem;
   background-color: white;
   width: 70%;
-}
+} */
 
 #input-email-ecpf {
   width: 100%;
@@ -277,13 +327,13 @@ body {
 
 #containerecpf-cep-rua-numero-ecpf {
   display: flex;
-  width: 100%;
+  /* width: 100%;
   flex-direction: row;
   border: 1px solid rgb(119, 119, 119);
   box-sizing: border-box;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: white; */
   gap: 1em;
 }
 
@@ -332,6 +382,41 @@ body {
   box-sizing: border-box;
 }
 
+#containerecpf-bairro-cidade-uf {
+  display: flex;
+  gap: 3rem;
+}
+
+#containerecpf-bairro,
+#containerecpf-cidade,
+#containerecpf-estado {
+  display: flex;
+  flex-direction: column;
+}
+
+#inputecpf-bairro {
+  width: 20rem;
+  height: 3.3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+#inputecpf-cidade {
+  width: 25rem;
+  height: 3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+#select-estado {
+  width: 5rem;
+  height: 3.3rem;
+  border: solid 0.15rem black;
+  border-radius: 0.5rem;
+}
+
 #container-cnh-ecpf {
   display: flex;
   flex-direction: column;
@@ -348,9 +433,17 @@ body {
 #label-cep-ecpf,
 #label-rua,
 #label-numero,
-#label-cnh-ecpf {
+#label-cnh-ecpf,
+#label-bairro,
+#label-cidade,
+#label-estado,
+#label-model-cert,
+#label-datavideo-cpf,
+#label-hora-cpf {
   font-family: "Roboto";
   font-size: 1.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.2rem;
 }
 
 #input-nome-ecpf {
@@ -372,6 +465,7 @@ body {
 }
 
 #btn-enviar2 {
+  display: block;
   width: 50rem;
   height: 4rem;
   align-self: center;
@@ -380,6 +474,12 @@ body {
   color: white;
   border-radius: 0.5rem;
   font-size: 1.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#section-cpf input::placeholder {
+  font-style: italic;
 }
 
 /*---------------Final e-CPF-----------------*/
@@ -411,9 +511,31 @@ body {
 #label-cartao-cnpj,
 #label-contrato-social,
 #label-hora,
-#label-data-video {
+#label-data-video,
+#label-model-certcnpj {
   font-family: "Roboto";
   font-size: 1.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+#container-model-certcnpj {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#select-model-certcnpj {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(119, 119, 119);
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+#container-data-hora {
+  display: flex;
 }
 
 #container-cnpj,
@@ -521,6 +643,7 @@ body {
 }
 
 #btn-enviar1 {
+  display: block;
   width: 50rem;
   height: 4rem;
   align-self: center;
@@ -529,6 +652,8 @@ body {
   color: white;
   border-radius: 0.5rem;
   font-size: 1.8rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #container-footer {
@@ -544,7 +669,7 @@ body {
   margin-bottom: 3rem;
 }
 
-#container-data-hora {
+#container-data-hora-cpf {
   display: flex;
 }
 
@@ -564,8 +689,19 @@ body {
   padding: 0 1rem;
 }
 
+#container-data-video {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 #container-label-horas {
+  display: flex;
+  width: 15rem;
   padding-left: 3rem;
+  align-items: center;
 }
 
 /*-------- Rodapé --------------------*/
