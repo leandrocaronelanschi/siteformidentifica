@@ -38,8 +38,8 @@ for (const modelCnpj of modelosCnpj) {
 const modelosCpf = [
   "e-CPF A1 - Validade: 1 ano",
   "e-CPF A3 - Validade: 3 anos",
-  "e-CPF A3 - Validade: 1 ano",
   "e-CPF A3 - Validade: 2 anos",
+  "e-CPF A3 - Validade: 1 ano",
 ];
 
 const selectModelCert = document.getElementById("select-model-cert");

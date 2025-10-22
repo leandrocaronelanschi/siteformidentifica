@@ -26,6 +26,7 @@ const upload = multer({
 });
 
 // Configurando os campos que serão aceitos pelo multer
+// As chaves de arquivos (cnh, cartao-cnpj, contrato-social) estão corretas.
 const uploadFields = upload.fields([
   { name: "cnh", maxCount: 1 },
   { name: "cartao-cnpj", maxCount: 1 },
@@ -34,22 +35,30 @@ const uploadFields = upload.fields([
 
 app.post("/enviar-email", uploadFields, async (req, res) => {
   try {
-    // Extrai campos comuns dos formulários
+    // --- CORREÇÃO APLICADA AQUI: Extração de todos os campos de texto ---
     const {
+      // Campos de Identificação (Comuns, mas alguns específicos)
       nomeCompleto,
       cpf,
-      telefone,
-      email,
+      telefone, // Usado em ambos os formulários
+      email, // Usado em ambos os formulários
+      cnpj,
+      responsavel, // Campos de Modelo de Certificado (Chaves novas do HTML)
+
+      "modelo-cert-cpf": modeloCertCpf,
+      "modelo-cert-cnpj": modeloCertCnpj, // Campos de Videoconferência (Tratados separadamente para CPF e CNPJ)
+
+      "data-video-cpf": dataVideoCpf,
+      "hora-video-cpf": horaVideoCpf,
+      "data-video": dataVideoCnpj, // Data CNPJ
+      "hora-video": horaVideoCnpj, // Hora CNPJ // Campos de Endereço (Apenas CPF no HTML)
+
+      cep,
       rua,
       numero,
       bairro,
       cidade,
       estado,
-      cep,
-      cnpj,
-      responsavel,
-      "data-video": dataVideo,
-      "hora-video": horaVideo,
     } = req.body; // Acessa os arquivos enviados
 
     const cnhFile = req.files["cnh"] ? req.files["cnh"][0] : null;
@@ -76,48 +85,68 @@ app.post("/enviar-email", uploadFields, async (req, res) => {
       attachments.push(
         new Attachment(file.buffer.toString("base64"), file.originalname)
       );
-    }); // Monta corpo do email dinamicamente com base no formulário enviado
+    });
 
-    let emailBody = `
-      <h1>Novo Cadastro</h1>
-      <h1>Identifica Express</h1>
-    `;
+    let emailBody = `<h1>Novo Cadastro - Identifica Express</h1><hr>`;
+    let subjectName = "Novo Cadastro";
+    let replyToName = ""; // Verifica qual formulário foi enviado (o campo CPF ou CNPJ estará preenchido)
 
     if (cpf) {
-      // Formulário CPF
+      // Formulário e-CPF
+      subjectName = `[E-CPF] Novo Cadastro: ${nomeCompleto}`;
+      replyToName = nomeCompleto;
       emailBody += `
+        <h2>Dados Pessoa Física (e-CPF)</h2>
+        <p><strong>Modelo do Certificado:</strong> ${modeloCertCpf || "N/A"}</p>
         <p><strong>Nome Completo:</strong> ${nomeCompleto}</p>
         <p><strong>CPF:</strong> ${cpf}</p>
         <p><strong>Telefone:</strong> ${telefone}</p>
         <p><strong>E-mail:</strong> ${email}</p>
         <hr>
+        <h3>Videoconferência (e-CPF)</h3>
+        <p><strong>Data:</strong> ${dataVideoCpf || "N/A"}</p>
+        <p><strong>Hora:</strong> ${horaVideoCpf || "N/A"}</p>
+        <hr>
         <h3>Endereço</h3>
+        <p><strong>CEP:</strong> ${cep}</p>
         <p><strong>Rua:</strong> ${rua}</p>
         <p><strong>Número:</strong> ${numero}</p>
         <p><strong>Bairro:</strong> ${bairro || "N/A"}</p>
         <p><strong>Cidade:</strong> ${cidade || "N/A"}</p>
-        <p><strong>Estado:</strong> ${estado || "N/A"}</p>
-        <p><strong>CEP:</strong> ${cep}</p>
+        <p><strong>Estado (UF):</strong> ${estado || "N/A"}</p>
         <hr>
-        <p>Os documentos foram enviados em anexo.</p>
+        <p>Os documentos (CNH/RG) foram enviados em anexo.</p>
       `;
     } else if (cnpj) {
-      // Formulário CNPJ
+      // Formulário e-CNPJ
+      subjectName = `[E-CNPJ] Novo Cadastro: ${responsavel}`;
+      replyToName = responsavel;
       emailBody += `
+        <h2>Dados Empresa (e-CNPJ)</h2>
+        <p><strong>Modelo do Certificado:</strong> ${
+        modeloCertCnpj || "N/A"
+      }</p>
         <p><strong>CNPJ:</strong> ${cnpj}</p>
         <p><strong>Nome do sócio ou responsável:</strong> ${responsavel}</p>
         <p><strong>Telefone:</strong> ${telefone}</p>
         <p><strong>E-mail:</strong> ${email}</p>
-        <p><strong>Data videoconferência:</strong> ${dataVideo}</p>
-        <p><strong>Hora videoconferência:</strong> ${horaVideo}</p>
         <hr>
-        <p>Os documentos foram enviados em anexo.</p>
+        <h3>Videoconferência (e-CNPJ)</h3>
+        <p><strong>Data:</strong> ${dataVideoCnpj || "N/A"}</p>
+        <p><strong>Hora:</strong> ${horaVideoCnpj || "N/A"}</p>
+        <hr>
+        <p>Os documentos foram enviados em anexo (CNH/RG, Cartão CNPJ, Contrato Social).</p>
       `;
+    } else {
+      // Caso o request chegue sem identificação de CPF ou CNPJ
+      return res
+        .status(400)
+        .send("Dados incompletos ou tipo de formulário inválido.");
     } // Configura remetente e destinatários
 
     const sentFrom = new Sender(
       process.env.SENDER_EMAIL,
-      nomeCompleto || responsavel
+      replyToName || "Solicitação Site"
     );
     const recipients = [
       new Recipient(process.env.EMAIL_DESTINO, "Admin do Site"),
@@ -126,10 +155,10 @@ app.post("/enviar-email", uploadFields, async (req, res) => {
     const emailParams = new EmailParams()
       .setFrom(sentFrom)
       .setTo(recipients)
-      .setReplyTo(new Sender(email, nomeCompleto || responsavel))
-      .setSubject(`Novo cadastro de ${nomeCompleto || responsavel}`)
+      .setReplyTo(new Sender(email, replyToName))
+      .setSubject(subjectName)
       .setHtml(emailBody)
-      .setAttachments(attachments); // Envia e-mail usando MailerSend
+      .setAttachments(attachments);
 
     await mailerSend.email.send(emailParams);
 

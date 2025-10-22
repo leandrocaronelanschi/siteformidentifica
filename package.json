@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/leandrocaronelanschi/formularioIdentifica/issues"
   },
-  "homepage": "https://github.com/leandrocaronelanschi/formularioIdentifica#readme"
+  "homepage": "https://github.com/leandrocaronelanschi/formularioIdentifica#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mailersend": "^2.6.0",
+    "multer": "^2.0.2"
+  }
 }
