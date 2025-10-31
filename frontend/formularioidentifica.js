@@ -119,20 +119,20 @@ btnCnpj.addEventListener("click", function () {
   document.getElementById("section-cnpj").classList.remove("oculto");
   document.getElementById("section-cpf").classList.add("oculto");
   const containerSection = document.getElementById("container-section");
-  containerSection.style.marginTop = "5rem";
+  // containerSection.style.marginTop = "2.5em";
 
   const margemFooter = document.getElementById("container-footer");
-  margemFooter.style.marginTop = "5rem";
+  // margemFooter.style.marginTop = "5rem";
 });
 
 btnCpf.addEventListener("click", function () {
   document.getElementById("section-cpf").classList.remove("oculto");
   document.getElementById("section-cnpj").classList.add("oculto");
   const containerSection = document.getElementById("container-section");
-  containerSection.style.marginTop = "5rem";
+  // containerSection.style.marginTop = "5rem";
 
   const margemFooter = document.getElementById("container-footer");
-  margemFooter.style.marginTop = "5rem";
+  // margemFooter.style.marginTop = "5rem";
 });
 
 // Função para envio via fetch usando FormData

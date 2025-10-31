@@ -82,7 +82,7 @@ body {
 #titulo-principal {
   display: flex;
   font-size: 4rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 #container-section {
@@ -825,6 +825,7 @@ body {
     width: 32em;
     height: 20em;
     gap: 2em;
+    margin-top: 0;
   }
 
   #container-button-opcao {
@@ -882,9 +883,8 @@ body {
 
   #titulo-principal {
     font-size: 2.1em;
-    padding-bottom: 2em;
     margin: 0;
-    /* letter-spacing: 0.15rem; */
+    padding: 2em 0;
   }
 
   #container-footer {
@@ -907,17 +907,20 @@ body {
 
   /*-------FORMULARIO CNPJ---------------*/
 
-  #section-cnpj {
+  #section-cnpj,
+  #section-cpf {
     width: 88vw;
     padding: 1em;
     margin-top: 3rem;
   }
 
-  #form-cnpj {
+  #form-cnpj,
+  #form-cpf {
     width: 100%;
   }
 
-  #container-dados-cnpj {
+  #container-dados-cnpj,
+  #container-dados-cpf {
     width: 100%;
     box-sizing: border-box;
     padding: 1em;
@@ -950,6 +953,39 @@ body {
 
   #container-cnpj-nome {
     flex-direction: column;
+    gap: 2em;
+  }
+
+  #container-responsavel {
+    padding-left: 0;
+  }
+
+  #input-responsavel {
+    display: flex;
+    width: 93%;
+  }
+
+  #container-tel-email {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  #container-email {
+    padding-left: 0;
+  }
+
+  #btn-enviar1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 2.5em;
+    align-self: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 }
 
