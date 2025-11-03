@@ -198,3 +198,32 @@ IMask(campoCpf, maskCampoCpf);
 const campoTelCpf = document.getElementById("input-tel-ecpf");
 const maskCampoTelCpf = { mask: "(00) 00000-0000" };
 IMask(campoTelCpf, maskCampoTelCpf);
+
+//-------Campo CEP ----------------
+const campoCepCpf = document.getElementById("input-cep-ecpf");
+const maskCampoCepCpf = { mask: "0000-000" };
+IMask(campoCepCpf, maskCampoCepCpf);
+
+//------ Inclusão da data atual no campo "Data"----------
+
+const data = new Date();
+const ano = data.getFullYear();
+const mes = String(data.getMonth() + 1).padStart(2, "0");
+const dia = String(data.getDate()).padStart(2, "0");
+const dataAtual = `${ano}-${mes}-${dia}`;
+
+// Data formulario CNPJ -----
+const campoData = document.getElementById("input-data-video");
+campoData.value = dataAtual;
+
+// Data formulario CPF ------
+
+const campoDataCpf = document.getElementById("input-datavideo-cpf");
+campoDataCpf.value = dataAtual;
+
+console.log(data);
+console.log(ano);
+console.log(mes);
+console.log(dia);
+console.log(dataAtual);
+console.log(campoData);

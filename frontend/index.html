@@ -130,7 +130,7 @@
                   type="email"
                   name="email"
                   id="input-email-ecpf"
-                  placeholder="Digite seu e-mail"
+                  placeholder="exemplo@exemplo.com"
                   required
                 />
               </div>
@@ -144,7 +144,7 @@
                   name="cep"
                   id="input-cep-ecpf"
                   class="no-spinner"
-                  placeholder="CEP"
+                  placeholder="0000-000"
                   required
                 />
               </div>
@@ -154,7 +154,7 @@
                   type="text"
                   name="rua"
                   id="input-rua-ecpf"
-                  placeholder="Nome da rua"
+                  placeholder="Ex: Rua Sabiá"
                   required
                 />
               </div>
@@ -164,6 +164,7 @@
                   type="number"
                   name="numero"
                   id="input-numero-ecpf"
+                  placeholder="Ex: 12345"
                   required
                 />
               </div>
@@ -171,23 +172,24 @@
 
             <div id="containerecpf-bairro-cidade-uf">
               <div id="containerecpf-bairro">
-                <label for="input-bairro" id="label-bairro">Bairro:</label>
+                <label for="inputecpf-bairro" id="label-bairro">Bairro:</label>
                 <input
                   type="text"
                   name="bairro"
                   id="inputecpf-bairro"
-                  placeholder="Digite o nome do bairro"
+                  placeholder="Ex: Centro"
                   required
                 />
               </div>
 
               <div id="containerecpf-cidade">
-                <label for="input-cidade" id="label-cidade">Cidade:</label>
+                <label for="inputecpf-cidade" id="label-cidade">Cidade:</label>
                 <input
                   type="text"
                   name="cidade"
                   id="inputecpf-cidade"
-                  placeholder="Nome da cidade"
+                  placeholder="Ex: São Paulo"
+                  required
                 />
               </div>
 
@@ -265,7 +267,7 @@
                   name="responsavel"
                   class="no-spinner"
                   id="input-responsavel"
-                  placeholder="Nome do sócio ou responsavel pela empresa"
+                  placeholder="Responsavel pela empresa"
                   maxlength="52"
                   required
                 />
