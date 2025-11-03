@@ -200,9 +200,9 @@ const maskCampoTelCpf = { mask: "(00) 00000-0000" };
 IMask(campoTelCpf, maskCampoTelCpf);
 
 //-------Campo CEP ----------------
-const campoCepCpf = document.getElementById("input-cep-ecpf");
-const maskCampoCepCpf = { mask: "0000-000" };
-IMask(campoCepCpf, maskCampoCepCpf);
+// const campoCepCpf = document.getElementById("input-cep-ecpf");
+// const maskCampoCepCpf = { mask: "00000-000" };
+// IMask(campoCepCpf, maskCampoCepCpf);
 
 //------ Inclusão da data atual no campo "Data"----------
 
@@ -220,10 +220,3 @@ campoData.value = dataAtual;
 
 const campoDataCpf = document.getElementById("input-datavideo-cpf");
 campoDataCpf.value = dataAtual;
-
-console.log(data);
-console.log(ano);
-console.log(mes);
-console.log(dia);
-console.log(dataAtual);
-console.log(campoData);
