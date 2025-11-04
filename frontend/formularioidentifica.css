@@ -884,9 +884,10 @@ body {
   }
 
   #titulo-principal {
-    font-size: 2.1em;
+    font-size: 2.5em;
     margin: 0;
     padding: 2em 0;
+    text-align: center;
   }
 
   /*
@@ -899,7 +900,7 @@ body {
   */
 
   #container-main {
-    padding-bottom: 15em;
+    padding-bottom: 10em;
   }
 
   #img-whatsapp-a {
@@ -1050,14 +1051,14 @@ body {
     width: 92%;
   }
 
-  #container-main {
-    padding-bottom: 10em;
-  }
-
   #select-model-certcnpj {
     width: 100%;
     box-sizing: 0;
   }
+
+  /* #container-footer {
+    margin-bottom: 6em;
+  } */
 }
 
 /*----------------- Final Media Query ------------*/
