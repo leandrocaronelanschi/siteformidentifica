@@ -119,20 +119,16 @@ btnCnpj.addEventListener("click", function () {
   document.getElementById("section-cnpj").classList.remove("oculto");
   document.getElementById("section-cpf").classList.add("oculto");
   const containerSection = document.getElementById("container-section");
-  // containerSection.style.marginTop = "2.5em";
 
   const margemFooter = document.getElementById("container-footer");
-  // margemFooter.style.marginTop = "5rem";
 });
 
 btnCpf.addEventListener("click", function () {
   document.getElementById("section-cpf").classList.remove("oculto");
   document.getElementById("section-cnpj").classList.add("oculto");
   const containerSection = document.getElementById("container-section");
-  // containerSection.style.marginTop = "5rem";
 
   const margemFooter = document.getElementById("container-footer");
-  // margemFooter.style.marginTop = "5rem";
 });
 
 // Função para envio via fetch usando FormData
@@ -181,12 +177,6 @@ const campoTel = document.getElementById("input-tel");
 const maskCampoTel = { mask: "(00) 00000-0000" };
 IMask(campoTel, maskCampoTel);
 
-//---- Campo e-mail -------
-
-// const campoEmail = document.getElementById("input-email");
-// const maskCampoEmail = { mask: /^\S*\S*$/ };
-// IMask(campoEmail, maskCampoEmail);
-
 //----- Campo CPF ------
 
 const campoCpf = document.getElementById("input-cpf-ecpf");
@@ -198,11 +188,6 @@ IMask(campoCpf, maskCampoCpf);
 const campoTelCpf = document.getElementById("input-tel-ecpf");
 const maskCampoTelCpf = { mask: "(00) 00000-0000" };
 IMask(campoTelCpf, maskCampoTelCpf);
-
-//-------Campo CEP ----------------
-// const campoCepCpf = document.getElementById("input-cep-ecpf");
-// const maskCampoCepCpf = { mask: "00000-000" };
-// IMask(campoCepCpf, maskCampoCepCpf);
 
 //------ Inclusão da data atual no campo "Data"----------
 
