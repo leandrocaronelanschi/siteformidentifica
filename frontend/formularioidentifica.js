@@ -85,11 +85,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const campoUf = document.getElementById("select-estado");
 
-  for (const uf of estadosBr) {
-    const optionUf = document.createElement("option");
-    campoUf.appendChild(optionUf);
-    optionUf.textContent = uf;
-  }
+  // for (const uf of estadosBr) {
+  //   const optionUf = document.createElement("option");
+  //   campoUf.appendChild(optionUf);
+  //   optionUf.textContent = uf;
+  // }
 
   //---------- Select hora CNPJ ---------
 
@@ -205,3 +205,58 @@ campoData.value = dataAtual;
 
 const campoDataCpf = document.getElementById("input-datavideo-cpf");
 campoDataCpf.value = dataAtual;
+
+async function buscarCep(cep) {
+  const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+
+  if (!response.ok) {
+    throw new Error(
+      `Erro HTTP! Status: ${response.status} - ${response.statusText}`
+    );
+  }
+
+  const data = await response.json();
+
+  if (data.erro) {
+    throw new Error("CEP não encontrado pela ViaCEP");
+  }
+
+  return data;
+}
+
+//-------- Teste para exibir os dados da Api ------
+
+const cepParaBuscar = 29066050;
+
+async function exibirCep() {
+  try {
+    const dadosDoCep = await buscarCep(cepParaBuscar);
+    console.log("Dados do CEP:", dadosDoCep);
+    console.log(dadosDoCep.logradouro);
+    console.log(dadosDoCep.bairro);
+  } catch (error) {
+    console.error("Erro na busca:", error.mensage);
+  }
+}
+
+exibirCep();
+
+const campoCep = document.getElementById("input-cep-ecpf");
+
+campoCep.addEventListener("blur", async () => {
+  const valorCampoCep = campoCep.value;
+
+  try {
+    const data = await buscarCep(valorCampoCep);
+
+    const campoRua = document.getElementById("input-rua-ecpf");
+    const campoBairro = document.getElementById("inputecpf-bairro");
+    const campoCidade = document.getElementById("inputecpf-cidade");
+    const campoUf = document.getElementById("select-estado");
+
+    campoRua.value = data.logradouro;
+    campoBairro.value = data.bairro;
+    campoCidade.value = data.localidade;
+    campoUf.value = data.uf;
+  } catch (error) {}
+});
