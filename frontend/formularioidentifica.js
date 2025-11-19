@@ -54,35 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("section-cpf").classList.add("oculto");
   document.getElementById("section-cnpj").classList.add("oculto"); // Popula select de horários corretamente
 
-  const estadosBr = [
-    "AC",
-    "AL",
-    "AP",
-    "AM",
-    "BA",
-    "CE",
-    "ES",
-    "GO",
-    "MA",
-    "MT",
-    "MS",
-    "MG",
-    "PA",
-    "PB",
-    "PR",
-    "PE",
-    "PI",
-    "RJ",
-    "RN",
-    "RS",
-    "RO",
-    "RR",
-    "SC",
-    "SP",
-    "SE",
-    "TO",
-  ];
-
   const campoUf = document.getElementById("select-estado");
 
   //---------- Select hora CNPJ ---------
