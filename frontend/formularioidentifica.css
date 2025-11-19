@@ -124,7 +124,6 @@ body {
   font-weight: 700;
   background-color: #0e3264;
   color: white;
-  /* padding: 2rem; */
 }
 
 #descricao-button-cnpj {
@@ -133,8 +132,6 @@ body {
   gap: 2rem;
   justify-content: center;
   text-align: center;
-  /* padding: 1.5rem;
-  box-sizing: border-box; */
 }
 
 #descricao-h1-button-cnpj {
@@ -155,8 +152,6 @@ body {
   gap: 2rem;
   justify-content: center;
   text-align: center;
-  /* padding: 1.5rem;
-  box-sizing: border-box; */
 }
 
 #descricao-h1-button-cpf {
@@ -871,10 +866,6 @@ body {
 
   /*-----Header Midea Query -------*/
 
-  /* #container-header {
-    width: 100%; 
-  } */
-
   #img-header-logo {
     width: 32rem;
   }
@@ -890,15 +881,6 @@ body {
     padding: 2em 0;
     text-align: center;
   }
-
-  /*
-  #container-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000; 
-  } 
-  */
 
   #container-main {
     padding-bottom: 10em;
@@ -1056,10 +1038,6 @@ body {
     width: 100%;
     box-sizing: 0;
   }
-
-  /* #container-footer {
-    margin-bottom: 6em;
-  } */
 }
 
 /*----------------- Final Media Query ------------*/
