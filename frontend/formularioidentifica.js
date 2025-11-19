@@ -85,12 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const campoUf = document.getElementById("select-estado");
 
-  // for (const uf of estadosBr) {
-  //   const optionUf = document.createElement("option");
-  //   campoUf.appendChild(optionUf);
-  //   optionUf.textContent = uf;
-  // }
-
   //---------- Select hora CNPJ ---------
 
   const hora = document.getElementById("select-hora");
